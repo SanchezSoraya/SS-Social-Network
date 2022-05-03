@@ -27,4 +27,8 @@ export class HistoriasEditarComponent implements OnInit {
     this.historiaService.deleteHistoria(id).subscribe();
   }
 
+  actualizarHistoria(titulo:HTMLInputElement, descripcion:HTMLTextAreaElement, imgPath:HTMLInputElement){
+    this.historiaService.putHistoria(titulo.value, descripcion.value, imgPath.value, "SorayaSanchez", this.id).subscribe();
+  }
+
 }

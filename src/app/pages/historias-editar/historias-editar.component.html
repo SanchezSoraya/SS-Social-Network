@@ -5,19 +5,23 @@
     <div class="row d-flex justify-content-center" *ngIf="historia">
         <div class="col-md-5">
             <div class="card">
-                <form class="form-body">
+                <form class="form-body" (submit)="actualizarHistoria(titulo, descripcion, imgPath)">
                     <div class="form-group m-1">
-                        <input type="text" class="form-control" placeholder="titulo" [value]="historia.titulo">
+                        <p class="ml-2 mt-2">Titulo</p>
+                        <input type="text" class="form-control" placeholder="titulo" [value]="historia.titulo" #titulo>
                     </div>
                     <div class="form-group m-1">
-                        <textarea rows="2" class="form-control" type="text" placeholder="descripcion" [value]="historia.descripcion">
+                        <p class="ml-2">Descripcion</p>
+                        <textarea rows="2" class="form-control" type="text" placeholder="descripcion" [value]="historia.descripcion" #descripcion>
                         </textarea>
                     </div>
                     <div class="form-group m-1">
-                        <input type="text" class="form-control" placeholder="imagen" [value]="historia.imgPath">
+                        <p class="ml-2">URL Imagen</p>
+                        <input type="text" class="form-control" placeholder="imagen" [value]="historia.imgPath" #imgPath>
                     </div>
 
                     <button class="btn btn-danger m-2" (click)="eliminarHistoria(historia.id)">Eliminar</button>
+                    <button class="btn btn-success m-2">Actualizar</button>
                 </form>
             </div>
         </div>

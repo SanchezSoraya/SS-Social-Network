@@ -15,25 +15,9 @@
             </ul>
             <span class="navbar-text">
 
-      <!--- <button *ngIf="!auth.loggedIn" 
-          (click)="auth.login()"
-          class="btn btn-outline-primary">
-              Ingresar</button> 
-              <button *ngIf="auth.loggedIn" 
-          (click)="auth.logout()"
-          class="btn btn-outline-danger">
-            Salir 
-        </button>-->
+    
 
-        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
-            <button class="btn btn-primary"  (click)="auth.logout({ returnTo: document.location.origin })">
-              Salir
-            </button>
-          </ng-container>
-      
-          <ng-template #loggedOut>
-            <button class="btn btn-primary" (click)="auth.loginWithRedirect()">Ingresar</button>
-          </ng-template>
+        
         </span>
         </div>
     </div>

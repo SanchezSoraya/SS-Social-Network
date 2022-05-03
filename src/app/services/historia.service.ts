@@ -30,12 +30,23 @@ export class HistoriaService {
       titulo,
       descripcion,
       imgPath: imagen,
-      username:'jjj',
+      username:'sorayasanchez',
     };
     console.log(historia);
 
     return this.http.post(`${this.URL}/api/historia`, historia);
   }
+
+putHistoria(titulo:string, descripcion:string, imgPath:string, username:string, id:string){
+  const historia = {
+    titulo,
+    descripcion,
+    imgPath: imgPath,
+    username:'sorayasanchez',
+  };
+
+  return this.http.put(`${this.URL}/api/historia/${id}`, historia);
+}
 
   deleteHistoria(id:string){
     return this.http.delete(`${this.URL}/api/historia/${id}`);

@@ -13,7 +13,7 @@ interface HtmlInputEvent extends Event {
 export class HistoriasFormularioComponent implements OnInit {
   constructor(private historiaService: HistoriaService) {}
 
-  crearHistoria(titulo: HTMLInputElement, descripcion: HTMLInputElement, imagen: HTMLInputElement) {
+  crearHistoria(titulo: HTMLInputElement, descripcion: HTMLTextAreaElement, imagen: HTMLInputElement) {
     console.log(titulo.value);
     this.historiaService.postHistoria(titulo.value,descripcion.value,imagen.value,"").subscribe()
 

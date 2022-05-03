@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthModule } from '@auth0/auth0-angular';
-import { CallbackComponent } from './components/callback/callback.component';
 import { HistoriasComponent } from './pages/historias/historias.component';
 import { HistoriasEditarComponent } from './pages/historias-editar/historias-editar.component';
 import { HistoriasFormularioComponent } from './pages/historias-formulario/historias-formulario.component';
@@ -18,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CallbackComponent,
     HistoriasComponent,
     HistoriasEditarComponent,
     HistoriasFormularioComponent
