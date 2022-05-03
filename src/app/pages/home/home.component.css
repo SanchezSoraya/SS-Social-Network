@@ -1,0 +1,7 @@
+.img-fluid-2 {
+    display: flex;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}

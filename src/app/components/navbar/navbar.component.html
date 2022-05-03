@@ -6,14 +6,12 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link active" aria-current="page" href="#" routerLink="/home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#" routerLink="/historias">Historias</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" href="#" routerLink="/precios">Precios</a>
+                    <a class="nav-link" href="#" routerLink="/historia/nueva">crear</a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
-                    <a class="nav-link" href="#" routerLink="/protegida">Protegida</a>
-                </li>
+
             </ul>
             <span class="navbar-text">
 
@@ -28,13 +26,13 @@
         </button>-->
 
         <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
-            <button (click)="auth.logout({ returnTo: document.location.origin })">
+            <button class="btn btn-primary"  (click)="auth.logout({ returnTo: document.location.origin })">
               Salir
             </button>
           </ng-container>
       
           <ng-template #loggedOut>
-            <button (click)="auth.loginWithRedirect()">Ingresar</button>
+            <button class="btn btn-primary" (click)="auth.loginWithRedirect()">Ingresar</button>
           </ng-template>
         </span>
         </div>

@@ -1,0 +1,18 @@
+<h1>Historias</h1>
+<hr />
+<div class="list-container" *ngIf="historias">
+    <div class="card-columns">
+        <div *ngFor="let historia of historias">
+            <div class="card card-photo pointer" (click)="cardSeleccionada(historia.id)">
+                <div class="card-header">
+                    <h2>{{ historia.titulo }}</h2>
+                    <p>@{{ historia.username }}h</p>
+                </div>
+                <div class="card-body">
+                    <img [src]="historia.imgPath" class="img-card-top w-100" *ngIf="historia.imgPath">
+                    <p>{{historia.descripcion }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
