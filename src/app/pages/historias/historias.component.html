@@ -6,7 +6,7 @@
             <div class="card card-photo pointer" (click)="cardSeleccionada(historia.id)">
                 <div class="card-header">
                     <h2>{{ historia.titulo }}</h2>
-                    <p>@{{ historia.username }}h</p>
+                    <p>@{{ historia.username }}</p>
                 </div>
                 <div class="card-body">
                     <img [src]="historia.imgPath" class="img-card-top w-100" *ngIf="historia.imgPath">
